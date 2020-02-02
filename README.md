@@ -1,2 +1,7 @@
 # poc_bang
-poc for banglore
+To execute on web: - 
+mvn clean test -Dtest=Runner -Dplatform=web
+
+
+To execute on android: - 
+mvn clean test -Dtest=Runner -Dplatform=android_web
