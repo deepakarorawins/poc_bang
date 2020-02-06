@@ -18,17 +18,14 @@ public class AndroidDriverFactory extends DriverFactory{
 	public static AndroidDriver<MobileElement> createDriverInstance(String browser) {
 		AndroidDriver<MobileElement> androidDriver = null;
 		DesiredCapabilities androidCaps = null;
-
 		switch (browser.toLowerCase()) {
 
 		case "chrome":
-			
 			androidCaps = new DesiredCapabilities();
 			androidCaps.setCapability("deviceName", "Galaxy S8");
 			androidCaps.setCapability("platformName", "Android");
 			androidCaps.setCapability(CapabilityType.BROWSER_NAME, "Chrome");
 			androidCaps.setCapability("automationName", "UiAutomator2");
-			
 			
 			System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeExePath());
 			try {
